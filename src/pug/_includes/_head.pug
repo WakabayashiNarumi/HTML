@@ -1,0 +1,42 @@
+meta(charset = "UTF-8")
+meta(http-equiv = "X-UA-Compatible" content = "IE=edge")
+meta(name = "viewport" content = "width = device-width, initial-scale = 1.0")
+meta( name="format-detection" content="telephone=no" )
+
+if pageTitle
+  title #{pageTitle} | #{site.name}
+else
+  title #{site.name}
+
+meta(name = "description" content = pageDescription)
+meta(name = "keywords" content = pageKeywords)
+
+//- twitter
+//- meta(name="twitter:card" content="")
+//- meta(name="twitter:site" content="")
+//- meta(name="twitter:description" content="")
+//- meta(name="twitter:title" content="")
+//- meta(name="twitter:image" content="")
+
+//- OGP
+//- meta(property="og:site_name" content="")
+//- meta(property="og:title" content="")
+//- meta(property="og:description" content="")
+//- meta(property="og:type" content="website")
+//- meta(property="og:url" content="")
+//- meta(property="fb:app_id" content="")
+//- meta(property="og:image" content="")
+
+block css
+  link(rel = "stylesheet" href = "/assets/css/style.css")
+  //- link(rel = "stylesheet" href = "/assets/css/swiper.min.css")
+
+  //- script(src="/assets/js/scroll_top.js" defer)
+  //- script(src="/assets/js/swiper.min.js" defer)
+  //- script(src="/assets/js/slider.js" defer)
+  //- script(src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js")
+  //- script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+
+  //- link(rel="shortcut icon" href="/favicon.ico")
+
+  //- <!-- Global site tag (gtag.js) - Google Analytics -->

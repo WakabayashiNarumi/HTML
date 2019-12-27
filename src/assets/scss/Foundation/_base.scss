@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+/* ========================================
+  base
+======================================== */
+// reset css
+// ------------------------------------------
+html {
+  overflow-y: scroll;
+  font-size: $baseFontSize;
+}
+object,embed {
+  vertical-align: top;
+}
+img,a img {
+  border: none;
+}
+li {
+  margin: 0;
+  list-style-type: none;
+}
+ol, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+h1,h2,h3,h4,h5,h6,p {
+  margin: 0;
+  font-size: 100%;
+  font-weight: normal;
+}
+form {
+  margin: 0;
+  padding: 0;
+  display: inline;
+  vertical-align: text-top;
+}
+fieldset {
+  border: 0;
+}
+input,textarea {
+  font-size: 1em;
+}
+dl,dt,dd {
+  padding: 0;
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+// base style
+// ------------------------------------------
+
+body {
+  color: $baseColor;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  // font-family: 'Noto Serif JP', serif;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+	text-decoration: none;
+	color: inherit;
+	&:hover {
+		text-decoration: none;
+	}
+}
+a[href^="tel:"] {
+  @include mq(sp) {
+    pointer-events: none;
+  }
+}
+button {
+  outline: none;
+}

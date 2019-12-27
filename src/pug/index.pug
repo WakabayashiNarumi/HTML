@@ -1,0 +1,16 @@
+extend /pug/_includes/_layout
+append variables
+  //- Required
+  - var pageTitle= "トップページ";
+  - var pageDescription= site.description;
+  - var pageKeywords= site.keywords;
+  - var pageLang= "ja";
+  //- Optional
+  - var pageOgpTitle= pageTitle;
+  - var pageOgpImage= site.ogpImage;
+  - var pageOgpType= "website";
+  - var pageOgpDescription= pageDescription;
+
+block content
+  main
+    h1 テスト

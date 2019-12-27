@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+// Breakpoint
+// --------------------------------------------------
+$breakpoints:(
+  'sp': 'screen and (max-width: 767px)',
+  'md': 'screen and (max-width: 1151px)',
+  'pc': 'screen and (min-width: 768px)',
+) !default;
+
+// @mixinでメディアクエリを呼び出す
+@mixin mq($breakpoint){
+  @media #{map-get($breakpoints, $breakpoint)}{
+    @content;
+  }
+}
+
+// Content Width
+// --------------------------------------------------
+$cntWidthPC: 1080px;
+
+// Font
+// --------------------------------------------------
+$baseFontSize: 10px;
+
+// 明朝
+// @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,700&display=swap&subset=japanese');
+// $baseFontFamily: 'Noto Serif JP', serif;
+
+// ゴシック
+// @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap&subset=japanese');
+// $baseFontFamily--sans: 'Noto Sans JP', sans-serif;
+
+// 画面サイズ767px以下のとき、fontsizeを自動計算
+@function get_vw($size, $viewport:767){
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+// font-size
+@mixin fz_vw($font_size:10){
+  font-size: get_vw($font_size);
+}
+
+// margin-bottom
+@mixin mgbtm_vw($mg_btm:10){
+  margin-bottom: get_vw($mg_btm);
+}
+
+// padding-bottom
+@mixin pdbtm_vw($pd_btm:10){
+  padding-bottom: get_vw($pd_btm);
+}
+
+// Color
+// --------------------------------------------------
+$baseColor: #333;
+// $mainColor: #cab331;
+// $secondaryColor: #efe8c1;
+// $tertiaryColor: #ede1a9;
+
+// hover opacity
+// --------------------------------------------------
+@mixin alpha($opacity:0.7) {
+  &:hover{
+    opacity: $opacity;
+    -moz-opacity: $opacity;
+    filter: alpha(opacity=#{$opacity * 100});
+    -ms-filter: "alpha(opacity=#{$opacity * 100})";
+  }
+}
